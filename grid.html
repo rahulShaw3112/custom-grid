@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid system</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		.row::after{
+			display: table;
+			clear:both;
+			content: '';
+		}
+		.row{
+			border: 2px solid red;
+		}
+		.col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;}
+
+		[class*='col-']{
+			float: left;
+			padding: 15px;
+		}
+
+		/*flex style grid*/
+		.flex-grid{
+			display: flex;
+		}
+		.flex-grid-spacy{
+			display: flex;
+			justify-content: space-between;
+		}
+		.flex-grid .col{
+			flex:1;
+		}
+
+		.flex-grid-spacy .col{
+			flex:1;
+			margin:1%;
+		}
+		/*flex style grid ends*/
+		.box:nth-child(n){
+			height: 200px;
+			background: #000;
+		}
+		.box:nth-child(2n){
+			height: 200px;
+			background: #aaa;
+		}
+
+		.box:nth-child(3n){
+			height: 200px;
+			background: pink;
+		}
+		
+		body,html{
+			padding: 0px;
+			margin:0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-1 box"></div>
+		<div class="col-2 box"></div>
+		<div class="col-2 box"></div>
+		<div class="col-2 box"></div>
+		<div class="col-2 box"></div>
+		<div class="col-2 box"></div>
+		<div class="col-2 box"></div>
+		<div class="col-3 box"></div>
+		<div class="col-3 box"></div>
+		<div class="col-3 box"></div>
+		<div class="col-3 box"></div>
+		<div class="col-4 box"></div>
+		<div class="col-4 box"></div>
+		<div class="col-4 box"></div>
+		<div class="col-6 box"></div>
+		<div class="col-6 box"></div>
+		<div class="col-12 box"></div>
+		<div class="col-2 box"></div>
+		<div class="col-10 box"></div>
+
+	</div>
+	<br>
+	<br>
+	<br>
+
+	<div class="flex-grid-spacy">
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+	</div>
+
+	<div class="flex-grid">
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+	</div>
+	<div class="flex-grid-spacy">
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+	</div>
+	<div class="flex-grid">
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+	</div>
+	<div class="flex-grid-spacy">
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+	</div>
+
+	<div class="flex-grid">
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+		<div class="col box"></div>
+	</div>
+</body>
+</html>
